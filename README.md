@@ -17,6 +17,7 @@ Further optimizations will include:
 - user logins
 - ability to favorite and give feedback
 - ability to share recommendations via: email, text message, and social media apps
+- add user input "pms symptom" and database will provide lifestyle recommendation to alleviate symptom.
 
 ## Lessons Learned:
 
