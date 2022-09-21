@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopIt!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>ShopIt!</h1>
+    <h2>Grocery Checklist</h2>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del'> remove </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> things left to shop for.</h2>
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="e.g. milk" name='todoItem'>
+        <input type="submit" value="Add Item">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
